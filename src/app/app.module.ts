@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms'; 
 
 import { MatToolbarModule } from '@angular/material';
 import { MatListModule } from '@angular/material';
@@ -9,7 +11,8 @@ import { MatGridListModule } from '@angular/material';
 import { MatCardModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatInputModule } from '@angular/material';
+import { MatCheckboxModule } from '@angular/material';
 
 import 'hammerjs'
 
@@ -51,6 +54,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module'
     MatButtonModule,
     FlexLayoutModule,
     MatDialogModule,
+    MatInputModule,
+    MatCheckboxModule,
+    FormsModule,
     AppRoutingModule
   ], 
   entryComponents: [
