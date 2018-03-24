@@ -6,7 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms'; 
 
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatSpinner } from '@angular/material';
 import { MatListModule } from '@angular/material';
 import { MatGridListModule } from '@angular/material';
 import { MatCardModule } from '@angular/material';
@@ -17,6 +17,7 @@ import { MatCheckboxModule } from '@angular/material';
 import { MatSlideToggleModule } from '@angular/material';
 import { MatOptionModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
+import { MatProgressSpinnerModule } from '@angular/material';
 
 import 'hammerjs'
 
@@ -63,6 +64,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module'
     MatSlideToggleModule,
     MatOptionModule,
     MatSelectModule,
+    MatProgressSpinnerModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule
