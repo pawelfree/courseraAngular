@@ -24,7 +24,7 @@ export class DishService {
   }
 
   getDish(id: number): Observable<Dish> {
-    return this.http.get(baseURL + 'dish/' + id)
+    return this.http.get(baseURL + 'dishes/' + id)
               .map(res => {return this.processHttpMsgService.extractData(res)});
   }
 
