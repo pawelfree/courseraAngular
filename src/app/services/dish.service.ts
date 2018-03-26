@@ -3,12 +3,8 @@ import { Dish } from '../shared/dish';
 
 import { Observable } from 'rxjs/Observable';
 
-import 'rxjs/add/operator/delay';
-import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 
-import { Http, Response } from '@angular/http';
 import { baseURL } from '../shared/baseurl';
 import { ProcessHttpMsgService } from './process-httpmsg.service';
 import { RestangularModule, Restangular } from 'ngx-restangular';
