@@ -41,6 +41,9 @@ import { ProcessHttpMsgService }  from './services/process-httpmsg.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { baseURL } from './shared/baseurl';
 
+import { RestangularModule, Restangular } from 'ngx-restangular';
+import { RestangularConfigFactory } from './shared/restconfig';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,6 +76,7 @@ import { baseURL } from './shared/baseurl';
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
+    RestangularModule.forRoot(RestangularConfigFactory),
     AppRoutingModule
   ], 
   entryComponents: [
