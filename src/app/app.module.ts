@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms'; 
+import { HttpModule } from '@angular/http';
 
 import { MatToolbarModule, MatSpinner } from '@angular/material';
 import { MatListModule } from '@angular/material';
@@ -33,10 +34,12 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 
 import { DishService } from './services/dish.service';
-import { PromotionService } from './services/promotion.service'
-import { LeaderService } from './services/leader.service'
+import { PromotionService } from './services/promotion.service';
+import { LeaderService } from './services/leader.service';
+import { ProcessHttpMsgService }  from './services/process-httpmsg.service';
 
-import { AppRoutingModule } from './app-routing/app-routing.module'
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { baseURL } from './shared/baseurl';
 
 @NgModule({
   declarations: [
@@ -68,13 +71,18 @@ import { AppRoutingModule } from './app-routing/app-routing.module'
     MatProgressSpinnerModule,
     MatSliderModule,
     FormsModule,
+    HttpModule,
     ReactiveFormsModule,
     AppRoutingModule
   ], 
   entryComponents: [
     LoginComponent
   ],  
-  providers: [DishService, PromotionService, LeaderService],
+  providers: [DishService, 
+              PromotionService, 
+              LeaderService, 
+              {provide: 'BaseURL', useValue: baseURL},
+              ProcessHttpMsgService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
