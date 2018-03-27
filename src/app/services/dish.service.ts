@@ -27,11 +27,11 @@ export class DishService {
     return this.restangular.all('dishes')
               .getList({featured: true})
               .map(dishes => dishes[0]);
-
   }
 
   getDishIds(): Observable<number[]>{
-    return this.getDishes()
+    return this.restangular.all('dishes')
+              .getList()
               .map(dishes => { return dishes.map(dish => dish.id)})
               .catch(error => { return this.processHttpMsgService.handleError(error)});
   }
