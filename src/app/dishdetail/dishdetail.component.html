@@ -61,7 +61,7 @@
           </p>
           <p>
             <mat-input-container class="full-width" dividerColor="{{formErrors.comment ? 'warn' : 'primary'}}">
-                <input matInput formControlName="comment" placeholder="Your comment" type="text" required>
+                <textarea matInput formControlName="comment" placeholder="Your comment" type="text" required></textarea>
                 <mat-hint>
                   <span [hidden]="!(formErrors.comment)">
                       {{formErrors.comment}}</span>
